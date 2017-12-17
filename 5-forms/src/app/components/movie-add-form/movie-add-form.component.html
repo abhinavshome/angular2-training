@@ -1,0 +1,44 @@
+<h2>Add Movie</h2>
+<form (ngSubmit)="onSubmit(); movieAddForm.resetForm();" #movieAddForm="ngForm">
+  <div>
+    <label>Title</label>
+    <input type="text" [(ngModel)]="movie.title" name="title" required #title="ngModel" minlength="5">
+    <div *ngIf="title.invalid && (title.dirty || title.touched)" class="error">
+      <div *ngIf="title.errors.required">
+        Title is required.
+      </div>
+      <div *ngIf="title.errors.minlength">
+        Title must be at least 5 characters long.
+      </div>
+    </div>
+  </div>
+  <div>
+    <label>Rating</label>
+    <input type="number" [(ngModel)]="movie.rating" name="rating" #rating="ngModel" required>
+    <div *ngIf="rating.invalid && (rating.dirty || rating.touched)" class="error">
+      <div *ngIf="rating.errors.required">
+        Rating is required.
+      </div>
+    </div>
+  </div>
+  <div>
+    <label>Year</label>
+    <input type="number" [(ngModel)]="movie.year" name="year" #year="ngModel" required>
+    <div *ngIf="year.invalid && (year.dirty || year.touched)" class="error">
+      <div *ngIf="year.errors.required">
+        Year is required.
+      </div>
+    </div>
+  </div>
+  <div>
+    <label>Thumbnail</label>
+    <input type="text" [(ngModel)]="movie.thumbnail" name="thumbnail" #thumbnail="ngModel" required>
+    <div *ngIf="thumbnail.invalid && (thumbnail.dirty || thumbnail.touched)" class="error">
+      <div *ngIf="thumbnail.errors.required">
+        Thumbnail is required.
+      </div>
+    </div>
+  </div>
+  <pre>{{movie | json}}</pre>
+  <button type="submit" class="btn" [disabled]="movieAddForm.invalid">Submit</button>
+</form>

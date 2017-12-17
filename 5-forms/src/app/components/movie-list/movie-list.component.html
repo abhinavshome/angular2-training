@@ -1,0 +1,11 @@
+<selected-movie [movie]="selectedMovie"></selected-movie>
+
+<movie-add-form (movieFormSubmit)="addMovie($event)"></movie-add-form>
+
+<h2>Top Movies</h2>
+<movie-list-item 
+  [movie]="movie" 
+  *ngFor="let movie of movies"
+  (movieSelect)="selectMovie($event)"
+>
+</movie-list-item>
