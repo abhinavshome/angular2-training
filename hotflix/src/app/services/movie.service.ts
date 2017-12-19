@@ -1,38 +1,33 @@
-import { Movie } from './../models/index';
-import { DUMMY_MOVIES } from './dummy-movies';
+import { DUMMY_MOVIES } from './../components/movie-list/dummy-movies';
+import { Movie } from './../models/movie';
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Headers } from '@angular/http';
-
+import {Http, Headers} from '@angular/http';
 
 @Injectable()
 export class MovieService {
-  private movies = DUMMY_MOVIES;
-  private selectedMovie: Movie;
-  private url = 'http://localhost:3000/movies';
+    private movies: Movie[];
+    private selectedMovie: Movie;
+    private url = 'http://localhost:3000/movies';
+    constructor(private http: Http) {
+        this.movies = DUMMY_MOVIES;
+    }
 
-  constructor(private http: Http) { }
+    getMovies() {
+        return this.http.get(this.url);
+    }
 
-  getMovies() {
-    return this.http.get(this.url);
-  }
+    selectMovie(movie) {
+        this.selectedMovie = movie;
+    }
 
-  getMovie(movieId) {
-    return this.http.get(this.url + '/' + movieId);
-  }
+    getSelectedMovie() {
+        return this.selectedMovie;
+    }
 
-  getSelectedMovie() {
-    return this.selectedMovie;
-  }
-
-  selectMovie(movieId) {
-    this.selectedMovie = this.movies.find(m => m.id === movieId);
-  }
-
-  addMovie(movie) {
-    const httpOptions = {
-      headers: new Headers({ 'Content-Type': 'application/json' })
-    };
-    return this.http.post(this.url, movie, httpOptions);
-  }
+    addMovie(movie) {
+        let options = {
+            headers: new Headers({ 'Content-Type': 'application/json' })
+        }
+        return this.http.post(this.url, movie, options);
+    }
 }

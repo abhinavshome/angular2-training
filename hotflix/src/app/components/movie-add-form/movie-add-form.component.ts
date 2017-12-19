@@ -1,7 +1,5 @@
-import { Router } from '@angular/router';
-import { MovieService } from './../../services/movie.service';
-import { Movie } from './../../models/index';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Movie } from './../../models/movie';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'movie-add-form',
@@ -9,27 +7,20 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./movie-add-form.component.css']
 })
 export class MovieAddFormComponent implements OnInit {
-  movie: Movie;
-  @Output() movieFormSubmit = new EventEmitter();
-  constructor(private movieService: MovieService, private router: Router) { }
+  @Output() formSubmit = new EventEmitter();
+  newMovie: Movie;
+  constructor() { }
 
-  reset() {
-    this.movie = {
+  ngOnInit() {
+    this.newMovie = {
       title: null,
+      year: null,
       rating: null,
-      thumbnail: null,
-      year: null
+      thumbnail: null
     };
   }
 
-  ngOnInit() {
-    this.reset();
-  }
-
   onSubmit() {
-    this.movieService
-      .addMovie(this.movie)
-      .subscribe(res => this.router.navigate(['/movies']));
+    this.formSubmit.emit(this.newMovie);
   }
-
 }

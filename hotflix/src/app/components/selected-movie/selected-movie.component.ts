@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SelectedMovieComponent implements OnInit {
   @Input() movie;
-
   constructor() { }
 
   ngOnInit() {

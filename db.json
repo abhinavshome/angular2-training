@@ -1,0 +1,22 @@
+{
+	"todos": [
+		{
+			"id": 1,
+			"label": "Bring Milk",
+			"done": false,
+			"priority": 3
+		},
+		{
+			"id": 2,
+			"label": "Bring Fruits",
+			"done": true,
+			"priority": 4
+		},
+		{
+			"id": 3,
+			"label": "Call Someone",
+			"done": true,
+			"priority": 1
+		}
+	]
+}

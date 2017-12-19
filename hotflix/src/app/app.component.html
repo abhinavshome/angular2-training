@@ -1,10 +1,2 @@
-<h1>HotFlix</h1>
-<div class="today">{{ today | date:'dd MMM yyyy' }}</div>
-
-<div class="menu">
-  <a routerLink="/movies" routerLinkActive="current">Movies</a> |
-  <a routerLink="/add-movie" routerLinkActive="current">Add Movie</a> |
-  <a routerLink="/about" routerLinkActive="current">About</a> 
-</div>
-
-<router-outlet></router-outlet>
+<h1>{{siteName}}</h1>
+<movie-list></movie-list>

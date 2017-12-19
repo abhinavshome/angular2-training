@@ -1,7 +1,7 @@
 export const DUMMY_MOVIES = [
     {
         id: 1,
-        title: 'Shawshank redemption',
+        title: 'Shawshank Redemption',
         rating: 9.2,
         year: 1994,
         thumbnail: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY67_CR0,0,45,67_AL_.jpg'
@@ -15,7 +15,7 @@ export const DUMMY_MOVIES = [
     },
     {
         id: 3,
-        title: 'The dark   knight',
+        title: 'The Dark knight',
         rating: 9.0,
         year: 2008,
         thumbnail: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UY67_CR0,0,45,67_AL_.jpg'

@@ -1,8 +1,10 @@
-<div [class.selected]="selected">
-  <div class="rating">{{ movie.rating | number:'1.1-1'}}</div>
-  <div class="thumbnail">
-    <img src="{{movie.thumbnail}}" alt=""/>
-  </div>
-  <div class="title"><a (click)="selectMovie(movie)">{{movie.title | titlecase }}</a> <br/> {{movie.year}}</div>
+<div 
+  class="movie"
+  [class.selected]="movie==selectedMovie"
+  >
+  <div class="rating">{{movie.rating | number:'1.1-1'}}</div>
+  <img src="{{movie.thumbnail}}" />
+  <div class="title" (click)="selectMovie()">{{movie.title | titlecase}}</div>
+  <div class="year">{{movie.year}}</div>
   <div class="clear"></div>
 </div>

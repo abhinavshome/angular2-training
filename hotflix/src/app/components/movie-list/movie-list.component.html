@@ -1,9 +1,13 @@
+<!-- {{ num | number:'4.3-5'}} <br>
+{{ num | currency:'INR'}} <br>
+{{ today  }} <br>
+{{ today | date }} <br>
+{{ today | date:'medium' }} <br>
+ <br> -->
+{{ today | date:'dd MMM, yyyy' }}
+<movie-add-form (formSubmit)="addMovie($event)"></movie-add-form>
 <selected-movie [movie]="selectedMovie"></selected-movie>
-<h2>Top Movies</h2>
-<movie-list-item 
-  [movie]="movie" 
-  *ngFor="let movie of movies"
-  (movieSelect)="selectMovie($event)"
-  [selected]="movie==selectedMovie"
->
-</movie-list-item>
+<div *ngFor="let movie of movies">
+  <movie-list-item [movie]="movie" (movieSelect)="selectMovie($event)">
+  </movie-list-item>
+</div>

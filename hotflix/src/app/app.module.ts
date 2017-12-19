@@ -2,7 +2,6 @@ import { MovieService } from './services/movie.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,9 +10,6 @@ import { MovieListItemComponent } from './components/movie-list-item/movie-list-
 import { SelectedMovieComponent } from './components/selected-movie/selected-movie.component';
 import { MovieAddFormComponent } from './components/movie-add-form/movie-add-form.component';
 import { TitlecasePipe } from './pipes/titlecase.pipe';
-import { RoutingModule } from './routing.module';
-import { AboutComponent } from './components/about/about.component';
-import { PlayMovieComponent } from './components/play-movie/play-movie.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +19,11 @@ import { PlayMovieComponent } from './components/play-movie/play-movie.component
     SelectedMovieComponent,
     MovieAddFormComponent,
     TitlecasePipe,
-    AboutComponent,
-    PlayMovieComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    RoutingModule
+    HttpModule
   ],
   providers: [
     MovieService

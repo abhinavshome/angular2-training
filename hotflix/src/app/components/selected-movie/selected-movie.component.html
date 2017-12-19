@@ -1,9 +1,8 @@
-<div *ngIf="movie" class="selected-movie">
-  <img src="{{movie.thumbnail}}" alt="">
-  <div class="play">
-    <div><b>{{movie.title}}</b></div>
-    <button routerLink="/play/{{movie.id}}">Play</button>
+<div class="selected-movie" *ngIf="movie">
+  <img src="{{movie.thumbnail}}" />
+  <div class="desc">
+      <b>{{movie.title}}</b><br/>
+      <button class="play-btn">Play</button>
   </div>
-  
-  <div class="clear"></div>
+    <div class="clear"></div>
 </div>

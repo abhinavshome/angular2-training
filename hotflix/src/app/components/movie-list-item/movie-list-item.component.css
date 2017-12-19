@@ -1,17 +1,17 @@
 .rating {
+    font-size: x-large;
     float: left;
-    font-size: xx-large;
+    line-height: 60px;
+    padding-right: 10px; 
+}
+img {
+    float: left;
+    padding-right: 10px;
+}
+title {
     font-weight: bold;
-    line-height: 30px;
-    padding: 5px;
 }
-.thumbnail {
-    float: left;
+.movie {
+    padding-bottom: 10px;
 }
-.title {
-    float: left;
-    padding-left: 10px;
-}
-.selected {
-    background-color: lightgray;
-}
+

@@ -1,17 +1,13 @@
-form>div {
-    padding: 5px;
-}
-label {
-    width: 100px;
+label { 
+    width: 100px; 
     display: inline-block;
+}
+form > div { 
+    margin-bottom: 10px;
 }
 .error {
     color: red;
-    font-size: small;
 }
-input.ng-touched.ng-dirty.ng-invalid {
+input.ng-invalid.ng-touched {
     border: 1px solid red;
-}
-form.ng-touched.ng-dirty.ng-invalid {
-    background-color: #ffeeee;
 }

@@ -1,4 +1,3 @@
-import { Movie } from './../../models/index';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -7,17 +6,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./movie-list-item.component.css']
 })
 export class MovieListItemComponent implements OnInit {
-  @Input() movie: Movie;
-  @Input() selected: boolean;
+  @Input() movie;
   @Output() movieSelect = new EventEmitter();
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  selectMovie(movie) {
-    this.movieSelect.emit(movie);
+  selectMovie() {
+    this.movieSelect.emit(this.movie);
   }
 
 }
