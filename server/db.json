@@ -55,6 +55,20 @@
       "rating": 8.7,
       "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY67_CR0,0,45,67_AL_.jpg",
       "id": 8
+    },
+    {
+      "title": "Inception",
+      "year": 2010,
+      "rating": 8.2,
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UY67_CR0,0,45,67_AL_.jpg",
+      "id": 9
+    },
+    {
+      "title": "GoodFellas",
+      "year": 1990,
+      "rating": 8.7,
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNThjMzczMjctZmIwOC00NTQ4LWJhZWItZDdhNTk5ZTdiMWFlXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UX45_CR0,0,45,67_AL_.jpg",
+      "id": 10
     }
   ]
 }

@@ -1,0 +1,13 @@
+label { 
+    width: 100px; 
+    display: inline-block;
+}
+form > div { 
+    margin-bottom: 10px;
+}
+.error {
+    color: red;
+}
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
